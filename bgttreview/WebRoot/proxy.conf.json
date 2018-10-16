@@ -1,0 +1,7 @@
+{
+"/api/*":{
+"target":"http://localhost:8080/bgttreview",
+"secure":false,
+"changeOrigin":true,
+"loglevel":"debug"
+}}
