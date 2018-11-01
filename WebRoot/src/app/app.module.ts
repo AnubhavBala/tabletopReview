@@ -7,11 +7,14 @@ import { ApiService } from './core';
 import { AppRoutingModule } from './app.routing.module';
 import { RouterModule } from '@angular/router';
 import { ReviewComponent } from './review/review.component';
-import{ReviewService} from './review/review.service';
+import {ReviewService} from './review/review.service';
+import { DndComponent } from './dnd/dnd.component';
+import { DndService } from './dnd/dnd.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ReviewComponent
+    ReviewComponent,
+    DndComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import{ReviewService} from './review/review.service';
     AppRoutingModule
 
   ],
-  providers: [ReviewService],
+  providers: [ReviewService,DndService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

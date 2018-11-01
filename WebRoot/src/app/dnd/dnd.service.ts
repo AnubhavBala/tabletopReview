@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Review } from '../models/review.model';
+import { DnD } from '../models/dnd.model';
 
 
 const httpOptions = {
@@ -9,16 +9,16 @@ const httpOptions = {
 };
 
 @Injectable()
-export class ReviewService {
+export class DndService {
 
   constructor(private http:HttpClient) {}
 
- //private reviewUrl = 'http://localhost:8080/bgttreview';
-  private reviewUrl = '/api/bgr';
+ //private dndUrl = 'http://localhost:8080/bgttreview';
+  private dndUrl = '/api/dnd';
 
-  public getReviews() {
+  public getDndSession() {
     console.log("calling get function");
-    return this.http.get<Review>(this.reviewUrl+'/rev');
+    return this.http.get<DnD>(this.dndUrl+'/stry');
   }
 
 
